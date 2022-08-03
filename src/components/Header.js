@@ -29,7 +29,6 @@ class Header extends Component {
       exchangeRates,
     }) => acc + (Number(exchangeRates[currency].ask) * value), 0);
     const valor2 = valor.toFixed(2);
-    console.log(valor);
     // acumulador + valorAtual * ValordaCotacao
     return (
       <div>
