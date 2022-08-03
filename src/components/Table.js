@@ -55,7 +55,7 @@ class Table extends Component {
                       data-testid="delete-btn"
                       name="excluir"
                       type="button"
-                      onClick={ this.apagaD(despesa) }
+                      onClick={ () => this.apagaD(despesa) }
                     >
                       Excluir
                     </button>
