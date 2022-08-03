@@ -48,6 +48,7 @@ class WalletForm extends Component {
         exchangeRates: [...prevState.exchangeRates, objeto],
       }));
     }); */
+    console.log(this.state);
     await salva(this.state);
     const { id } = this.state;
     this.setState({

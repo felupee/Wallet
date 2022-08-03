@@ -1,4 +1,4 @@
-import { GET_COTACAO, GET_MOEDA, SALVA_STORE } from '../actions';
+import { APAGA_DESPESA, GET_COTACAO, GET_MOEDA, SALVA_STORE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -19,6 +19,10 @@ function wallet(state = INITIAL_STATE, action) {
   case SALVA_STORE:
     return {
       ...state, expenses: [...state.expenses, action.payload],
+    };
+  case APAGA_DESPESA:
+    return {
+      ...state, expenses: [...state.expenses.filter((des) => des !== action.value)],
     };
   default:
     return state;

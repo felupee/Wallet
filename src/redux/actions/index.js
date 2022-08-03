@@ -3,6 +3,7 @@ export const REQUEST_API = 'REQUEST_API';
 export const GET_MOEDA = 'GET_MOEDA';
 export const GET_COTACAO = 'GET_COTACAO';
 export const SALVA_STORE = 'SALVA_STORE';
+export const APAGA_DESPESA = 'APAGA_DESPESA';
 
 export const salvaLogin = (payload) => ({
   type: DADOS_LOGIN,
@@ -24,6 +25,11 @@ export const getCotacao = (data) => ({
 export const salvaNaStore = (payload) => ({
   type: SALVA_STORE,
   payload,
+});
+
+export const apagaDespesa = (value) => ({
+  type: APAGA_DESPESA,
+  value,
 });
 
 export function fetchAPI() {

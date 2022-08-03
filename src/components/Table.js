@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { apagaDespesa } from '../redux/actions';
 
 class Table extends Component {
+  apagaD = (value) => {
+    const { apaga } = this.props;
+    apaga(value);
+  }
+
   render() {
     const { expenses } = this.props;
     // console.log('expenses', expenses);
@@ -44,7 +50,16 @@ class Table extends Component {
                     }
                   </td>
                   <td>Real</td>
-                  <td>Excluir</td>
+                  <td>
+                    <button
+                      data-testid="delete-btn"
+                      name="excluir"
+                      type="button"
+                      onClick={ this.apagaD(despesa) }
+                    >
+                      Excluir
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             ))
@@ -59,8 +74,13 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  apaga: (value) => dispatch(apagaDespesa(value)),
+});
+
 Table.propTypes = {
   expenses: PropTypes.arrayOf(Object).isRequired,
+  apaga: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(Table);
+export default connect(mapStateToProps, mapDispatchToProps)(Table);
