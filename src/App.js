@@ -9,6 +9,7 @@ function App() {
       <Route exact path="/" render={ () => <Login /> } />
       <Switch>
         <Route path="/carteira" component={ Wallet } />
+        <Route path="/carteira" component={ Wallet } />
       </Switch>
     </div>
   );

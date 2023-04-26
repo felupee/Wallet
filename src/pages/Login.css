@@ -1,0 +1,50 @@
+.main1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 255, 222);
+  }
+
+.main2 {
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 5px #ffffff, -2px -2px 5px #ffffff, -2px 2px 5px #ffffff, 2px -2px 5px #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: 35px;
+    background-color: rgb(177, 255, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  input {
+    margin-bottom: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 35px;
+    border: none;
+  }
+  
+  button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  
+  button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+  

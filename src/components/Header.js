@@ -3,23 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Header extends Component {
-/*   constructor() {
-    super();
-    this.state = {
-      valor: 0,
-    };
-  } */
-
-  /*   componentDidMount() {
-    const { expenses } = this.props;
-    const { valor } = this.state;
-    expenses.forEach((element) => {
-      this.setState({
-        valor: valor + element.value,
-      });
-    });
-  } */
-
   render() {
     const { email, expenses } = this.props;
     // criar um reduce com expenses e o valor inicial 0
@@ -31,7 +14,7 @@ class Header extends Component {
     const valor2 = valor.toFixed(2);
     // acumulador + valorAtual * ValordaCotacao
     return (
-      <div>
+      <div className="header">
         <h1 data-testid="email-field">{email}</h1>
         <h2 data-testid="total-field">{valor2}</h2>
         <h3 data-testid="header-currency-field">BRL</h3>

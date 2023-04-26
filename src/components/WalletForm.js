@@ -36,18 +36,6 @@ class WalletForm extends Component {
     this.setState({
       exchangeRates: cotacao,
     });
-    // console.log('cotação', cotacao);
-    /*     const array = Object.values(cotacao);
-    array.forEach((element) => {
-      const objeto = {
-        code: element.code,
-        name: element.name,
-        ask: element.ask,
-      };
-      this.setState((prevState) => ({
-        exchangeRates: [...prevState.exchangeRates, objeto],
-      }));
-    }); */
     console.log(this.state);
     await salva(this.state);
     const { id } = this.state;
@@ -64,7 +52,7 @@ class WalletForm extends Component {
     const metodos = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
     const despesas = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
-      <div>
+      <div className="WalletForm">
         Despesas:
         <input
           data-testid="value-input"

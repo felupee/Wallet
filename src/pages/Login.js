@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { salvaLogin } from '../redux/actions';
+import './Login.css';
+import logo from './wallet.png';
 
 class Login extends React.Component {
   constructor(props) {
@@ -49,32 +51,35 @@ class Login extends React.Component {
   render() {
     const { email, senha, botaoLogin, redirect } = this.state;
     return (
-      <div>
-        { redirect && <Redirect to="/carteira" />}
-        Email:
-        <input
-          data-testid="email-input"
-          type="text"
-          name="email"
-          onChange={ this.handleImput }
-          value={ email }
-        />
-        Senha:
-        <input
-          data-testid="password-input"
-          type="text"
-          name="senha"
-          onChange={ this.handleImput }
-          value={ senha }
-        />
-        <button
-          data-testid="login-submit-button"
-          type="button"
-          disabled={ botaoLogin }
-          onClick={ this.enviar }
-        >
-          Entrar
-        </button>
+      <div className="main1">
+        <div className="main2">
+          { redirect && <Redirect to="/carteira" />}
+          <img src={ logo } alt="logo" width="300" />
+          Email:
+          <input
+            data-testid="email-input"
+            type="text"
+            name="email"
+            onChange={ this.handleImput }
+            value={ email }
+          />
+          Senha:
+          <input
+            data-testid="password-input"
+            type="password"
+            name="senha"
+            onChange={ this.handleImput }
+            value={ senha }
+          />
+          <button
+            data-testid="login-submit-button"
+            type="button"
+            disabled={ botaoLogin }
+            onClick={ this.enviar }
+          >
+            Entrar
+          </button>
+        </div>
       </div>
     );
   }
