@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/94487469/234678035-222860a5-7cb1-4d89-8863-29f069a9c73c.png">
 </p>
 
-Olá, seja bem vindo ao repositório do projeto Wallet! Aqui você irá aprender como instalar e testar esse projeto na sua máquina, mas caso queira uma explicação mais detalhada sobre o projeto StarWars e suas funcionalidades, sem precisar baixar e executar o projeto, recomendo você a visitar esse mesmo projeto no meu portifólio clicando [aqui](https://felupee.github.io/front-end/projetos/Wallet/wallet.html). 
+Olá, seja bem vindo ao repositório do projeto Wallet! Aqui você irá aprender como instalar e testar esse projeto na sua máquina, mas caso queira uma explicação mais detalhada sobre o projeto Wallet e suas funcionalidades, sem precisar baixar e executar o projeto, recomendo você a visitar esse mesmo projeto no meu portifólio clicando [aqui](https://felupee.github.io/front-end/projetos/Wallet/wallet.html). 
 
 ## Habilidades :computer: :rocket: 
 
